@@ -32,7 +32,7 @@ export class HomePage {
 
   async addData() {
     const alert = await this.alertCtrl.create({
-      header: 'Add Fun Faction',
+      header: 'Add Fun Fact',
       inputs: [
         { name: 'title', placeholder: 'Title', type: 'text' },
         { name: 'content', placeholder: 'Fun Fact', type: 'textarea' },
