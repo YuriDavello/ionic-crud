@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>modal</ion-title>
+  <ion-toolbar color="secondary">
+    <ion-title>Curiosity</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div *ngIf="data">
+    <ion-item>
+      <ion-label position="stacked">TITLE</ion-label>
+      <ion-input [(ngModel)]="data.title"></ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-label position="stacked">FUN FACT</ion-label>
+      <ion-textarea [(ngModel)]="data.content" rows="8"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <ion-button expand="block" color="success" (click)="updateData()">
+    <ion-icon name="save" slot="start"></ion-icon>
+    Update
+  </ion-button>
+
+  <ion-button expand="block" color="danger" (click)="deleteData()">
+    <ion-icon name="trash" slot="start"></ion-icon>
+    Delete
+  </ion-button>
 </ion-content>
