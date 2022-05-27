@@ -24,7 +24,7 @@ export class ModalPage implements OnInit {
   }
 
   async updateData() {
-    await this.dataService.updateData(this.data);
+    this.dataService.updateData(this.data);
     const toast = await this.toastCtrl.create({
       message: 'Data updated!',
       duration: 3000,
